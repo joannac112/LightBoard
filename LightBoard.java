@@ -27,6 +27,18 @@ public class LightBoard{
     * as described in part (b).
     * Precondition: row and col are valid indexes in lights.
     */
-    //public boolean evaluateLight(int row, int col)
+    public boolean evaluateLight(int row, int col){
+        boolean light = lights[row][col];
+        int colLights = 0;
+        for (int r = 0; r<lights.length; r++){
+            if (lights[r][col]) colLights++;
+        }
+        if (light && colLights % 2 ==0) return false;
+        if (light && colLights % 3 ==0) return true;
+        return light;
+    }
+    public void setLights(boolean[][] arr){
+        lights = arr;
+    }
     // There may be additional instance variables, constructors, and methods not shown.
 }
