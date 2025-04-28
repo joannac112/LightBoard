@@ -13,5 +13,10 @@ public class Main{
             {true, true, false, true, true},
             {false, false, false, false, false},
         };
+        sim.setLights(lights);
+        System.out.println(sim.evaluateLight(0, 3));
+        System.out.println(sim.evaluateLight(6, 0));
+        System.out.println(sim.evaluateLight(4, 1));
+        System.out.println(sim.evaluateLight(5, 4));
     }
 }

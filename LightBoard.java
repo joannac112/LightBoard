@@ -34,7 +34,7 @@ public class LightBoard{
             if (lights[r][col]) colLights++;
         }
         if (light && colLights % 2 ==0) return false;
-        if (light && colLights % 3 ==0) return true;
+        if (!light && colLights % 3 ==0) return true;
         return light;
     }
     public void setLights(boolean[][] arr){
